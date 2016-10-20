@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
+  font: Roboto-condensed;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -15,11 +16,89 @@ html {
  */
 
 body {
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
   background-color: #eee;
 }
 
+main {
+  margin: auto;
+  height: 100%;
+  width: 450px;
+  align-content: center;
+  background-color: white;
+  padding-top: 100px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ div.text-body {
+  height: 50px;
+}
+span.date {
+  float: left;
+}
+
+i {
+float: right;
+padding-right: 10px
+}
+
+.tweet {
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 10px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.tweet .header {
+  width: 100%;
+  height: 100px;
+  vertical-align: top;
+  background-color: #008080;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.tweet .main {
+  height: 100px;
+  padding-left: 10px;
+}
+
+.text {
+  vertical-align: center;
+}
+.tweet .footer {
+  height: 25px;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.tweet .header .userHandle {
+ right: 0;
+ top: 0;
+ display: inline-block;
+ color: white;
+}
+
+.tweet .header .username {
+  display: inline-block;
+  width: 100px;
+  color: white;
+}
+.tweet .header .img {
+  display: inline-block;
+  width: 50px;
+}
+
+.tweet .glyphicon  {
+  position: relative;
+  display: inline-block;
+}

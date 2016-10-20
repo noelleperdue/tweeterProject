@@ -15,6 +15,10 @@ db.connect((dbInstance) => {
   app.use('/tweets', tweetsApi(dbInstance));
 });
 
+// app.get("/", () => {
+//  req.
+// });
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
