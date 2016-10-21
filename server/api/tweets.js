@@ -7,11 +7,9 @@ const tweets  = express.Router();
 module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
-    let tweets = db.getTweets();
-    // simulate delay
-    setTimeout(() => {
+    let tweets = db.getTweets((tweets) => {
       return res.json(tweets);
-    }, 300);
+    });
   });
 
   tweets.post("/", function(req, res) {
@@ -28,6 +26,7 @@ module.exports = function(db) {
       },
       created_at: Date.now()
     };
+    console.log(tweet);
     db.saveTweet(tweet);
     return res.send();
   });
@@ -35,5 +34,3 @@ module.exports = function(db) {
   return tweets;
 
 }
-
-

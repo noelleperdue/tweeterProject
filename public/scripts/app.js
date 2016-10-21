@@ -2,7 +2,7 @@ $(function() {
   function renderTweets(tweets) {
     $('#tweets-container').empty();
     $.each(tweets, function(index, tweet) {
-      // console.log(tweet);
+      console.log(tweet);
       var $eachTweet = createTweetElement(tweet);
       $eachTweet.prependTo("#tweets-container");
     });
@@ -48,7 +48,9 @@ $(function() {
       url: '/tweets',
       dataType: 'json',
       success: function(tweets) {
+        console.log(tweets);
         renderTweets(tweets);
+
       }
     });
   }
@@ -65,7 +67,7 @@ $(function() {
     if ($('textarea.text').val().length > 140) {
       return;
     }
-    console.log($('#tweetForm').serialize());
+    console.log("tweet with seialization", $('#tweetForm').serialize());
     $.ajax({
       method: 'POST',
       url: "/tweets",
@@ -73,7 +75,9 @@ $(function() {
       success: function(tweets) {
         loadTweets();
       }
+
     });
+     $('textarea.text').val == "";
    });
   }
 )
